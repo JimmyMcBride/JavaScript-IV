@@ -115,5 +115,5 @@ console.log(mimi.grade(bob, 'Python')) // Bob recives a perfect score on Python.
 console.log(bob.listsSubjects(bob.favSubjects)) // Bob's favorite subjects are: HTML, CSS, JavaScript.
 console.log(jade.PRAssignment('Ruby')) // Jade has submitted a PR for Ruby.
 console.log(jade.sprintChallenge('JavaScript')) // Jade has begun sprint challenge on JavaScript.
-console.log(mimi.gradeAssignment(bob)) // Bob will graduate Lambda School if he passes.
-console.log(mimi.graduateStudent(bob)) // 
+console.log(mimi.gradeAssignment(bob)) // Bob's grade..
+console.log(mimi.graduateStudent(bob)) // Does Bob score good enough to graduate Lambda School?
