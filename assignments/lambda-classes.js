@@ -24,7 +24,18 @@ class Instructor extends Person {
 		return `${student.name} recives a perfect score on ${subject}.`
 	}
 	gradeAssignment(student){
-		if (student.grade() >= 70){
+		let rndm = Math.random()
+		if (rndm >= 0.5){
+			let newGrade = student.grade() + 1
+			return newGrade
+		} else {
+			let newGrade = student.grade() - 1
+			return newGrade
+		}
+		
+	}
+	graduateStudent(student){
+		if (this.newGrade >= 70){
 			return `${student.name} graduates Lambda School!`
 		} else {
 			return `${student.name} does not graduate Lambda School.`
@@ -105,3 +116,4 @@ console.log(bob.listsSubjects(bob.favSubjects)) // Bob's favorite subjects are: 
 console.log(jade.PRAssignment('Ruby')) // Jade has submitted a PR for Ruby.
 console.log(jade.sprintChallenge('JavaScript')) // Jade has begun sprint challenge on JavaScript.
 console.log(mimi.gradeAssignment(bob)) // Bob will graduate Lambda School if he passes.
+console.log(mimi.graduateStudent(bob))
