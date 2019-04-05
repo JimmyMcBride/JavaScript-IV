@@ -76,11 +76,11 @@ class CharacterStats extends GameObject {
 
 // New Code:
 class Humanoid extends CharacterStats {
-	constructor(object){
-		super(object)
-		this.team = object.team
-		this.weapons = object.weapons
-		this.language = object.language
+	constructor(attr){
+		super(attr)
+		this.team = attr.team
+		this.weapons = attr.weapons
+		this.language = attr.language
 	}
 	greet(){
 		return `${this.name} offers a greeting in ${this.language}`
