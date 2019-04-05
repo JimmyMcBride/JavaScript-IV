@@ -23,6 +23,13 @@ class Instructor extends Person {
 	grade(student, subject){
 		return `${student.name} recives a perfect score on ${subject}.`
 	}
+	gradeAssignment(student){
+		if (student.grade() >= 70){
+			return `${student.name} graduates Lambda School!`
+		} else {
+			return `${student.name} does not graduate.`
+		}
+	}
 }
 
 class Student extends Person {
@@ -31,6 +38,7 @@ class Student extends Person {
 		this.previousBackground = attr.previousBackground
 		this.className = attr.className
 		this.favSubjects = attr.favSubjects
+		
 	}
 	listsSubjects(array){
 		return `${this.name}'s favorite subjects are: ${array[0]}, ${array[1]}, ${array[2]}.`
@@ -41,6 +49,11 @@ class Student extends Person {
 	sprintChallenge(subject){
 		return `${this.name} has begun sprint challenge on ${subject}.`
 	}
+	grade(){
+		return Math.floor(Math.random() * 100) + 1
+		
+	}
+
 }
 
 const fred = new Instructor({
@@ -70,7 +83,8 @@ const bob = new Student({
 	gender: 'male',
 	previousBackground: 'HTML and CSS',
 	className: 'JS101',
-	favSubjects: ['HTML', 'CSS', 'JavaScript']
+	favSubjects: ['HTML', 'CSS', 'JavaScript'],
+	
 })
 
 const jade = new Student({
@@ -90,3 +104,4 @@ console.log(mimi.grade(bob, 'Python')) // Bob recives a perfect score on Python.
 console.log(bob.listsSubjects(bob.favSubjects)) // Bob's favorite subjects are: HTML, CSS, JavaScript.
 console.log(jade.PRAssignment('Ruby')) // Jade has submitted a PR for Ruby.
 console.log(jade.sprintChallenge('JavaScript')) // Jade has begun sprint challenge on JavaScript.
+console.log(mimi.gradeAssignment(bob))
